@@ -6,12 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
+    <!-- Noto Sans CJK KR -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "mdp8wik",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
   </head>
   <body>
     <div class="wrap">
-      <header></header>
-      <nav></nav>
-      <main></main>
+      <header>
+        <div class="header_wrap">
+          <div class="logo">
+            <img src="logo_clipartkorea.png" alt="" width="100%" height="100%" />
+          </div>
+          <div class="btn">
+            <img src="icons/btn_new_design.png" alt="" />
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <nav>
+          <div class="menu_wrap">
+            <div class="menu active">
+              <div class="menu_icon">
+                <img src="icons/icon_menu_home_on.png" alt="" />
+              </div>
+              <span>HOME</span>
+            </div>
+
+            <div class="menu">
+              <div class="menu_icon">
+                <img src="icons/icon_menu_my_space.png" alt="" />
+              </div>
+              <span>내 창작공간</span>
+            </div>
+
+            <div class="menu">
+              <div class="menu_icon">
+                <img src="icons/icon_menu_e_myboard.png" alt="" />
+              </div>
+              <span>E-마이보드</span>
+            </div>
+
+            <div class="menu">
+              <div class="menu_icon">
+                <img src="icons/icon_menu_my_upload.png" alt="" />
+              </div>
+              <span>내 업로드</span>
+            </div>
+
+            <div class="menu">
+              <div class="menu_icon">
+                <img src="icons/icon_menu_waste_basket.png" alt="" />
+              </div>
+              <span>휴지통</span>
+            </div>
+          </div>
+        </nav>
+        <main></main>
+      </div>
     </div>
+
+    <script>
+      var url = "http://nemolabs.iptime.org:1080/editor";
+
+      if (navigator.userAgent.indexOf("Trident") > 0) {
+        alert(
+          "본 사이트는 Microsoft Edge, Chrome 브라우저에 최적화 되어있습니다. " +
+            "원할한 사용을 원하시면 Microsoft Edge, Chrome 브라우저를 권장합니다. 확인버튼을 누르면 Edge브라우저로 자동으로 이동됩니다."
+        );
+        window.location = "microsoft-edge:" + url;
+      } else if (/MSIE \d |Trident.*rv:/.test(navigator.userAgent)) {
+        alert(
+          "본 사이트는 Microsoft Edge, Chrome 브라우저에 최적화 되어있습니다. " +
+            "원할한 사용을 원하시면 Microsoft Edge, Chrome 브라우저를 권장합니다. 확인버튼을 누르면 Edge브라우저로 자동으로 이동됩니다."
+        );
+        window.location = "microsoft-edge:" + url;
+      }
+    </script>
   </body>
 </html>

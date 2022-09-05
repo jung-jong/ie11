@@ -1,34 +1,86 @@
 @import "reset.css";
 
+:root {
+  --border-color: #cccccc;
+}
+
+* {
+  font-family: noto-sans-cjk-kr, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .wrap {
   height: 100vh;
   width: 100%;
   position: relative;
   display: flex;
+  flex-direction: column;
 }
 
 header {
   height: 70px;
   width: 100%;
-  background-color: antiquewhite;
-  position: fixed;
-  flex: 1 0 auto;
+  display: flex;
+  border-bottom: 1px solid #cccccc;
+}
+header .header_wrap {
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header_wrap .logo {
+  width: 124px;
+  height: 13px;
+  cursor: pointer;
+}
+header .header_wrap .btn {
+  width: 166px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
 }
 
 nav {
-  position: fixed;
   top: 70px;
   width: 250px;
   height: calc(100vh - 70px);
-  background-color: aliceblue;
+  border-right: 1px solid #cccccc;
+}
+nav .menu_wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+}
+nav .menu_wrap .menu {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  cursor: pointer;
+}
+nav .menu_wrap .active {
+  color: #a096f0;
+}
+nav .menu_wrap .menu .menu_icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 14px;
 }
 
 main {
   position: relative;
-  /* left: 250px; */
-  /* top: 70px; */
-  margin-left: 250px;
-  margin-top: 70px;
   flex: 1;
-  background-color: pink;
 }
